@@ -1,0 +1,6 @@
+CREATE TABLE estaciones (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    pos_x DOUBLE PRECISION NOT NULL,
+    pos_y DOUBLE PRECISION NOT NULL
+);
