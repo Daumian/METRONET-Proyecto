@@ -1,0 +1,12 @@
+CREATE TABLE estaciones (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    pos_x DOUBLE PRECISION NOT NULL,
+    pos_y DOUBLE PRECISION NOT NULL
+);
+
+CREATE TABLE conexiones (
+    id SERIAL PRIMARY KEY,
+    origen_id INTEGER NOT NULL REFERENCES estaciones(id) ON DELETE CASCADE,
+    destino_id INTEGER NOT NULL REFERENCES estaciones(id) ON DELETE CASCADE
+);
